@@ -1,6 +1,5 @@
 package com.springapplication.controllers;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 import com.springapplication.models.PersonModel;
 import com.springapplication.models.PersonModelVersion;
 import com.springapplication.services.PersonService;
@@ -20,7 +16,6 @@ import com.springapplication.services.PersonService;
 public class IndexController {
 	@Autowired
 	private PersonService service;
-	private PersonModel person = new PersonModel();
 
 	@RequestMapping("index")
 	public ModelAndView index() {
